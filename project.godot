@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="Pong"
+run/main_scene="res://Scenes/stage.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=640
+window/size/resizable=false
