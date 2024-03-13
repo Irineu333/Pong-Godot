@@ -3,16 +3,17 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_k4p42"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_x4bb0"]
-b = Vector2(0, 128)
+a = Vector2(0, -8)
+b = Vector2(0, 136)
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_k4p42")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -16.0
-offset_top = -64.0
+offset_top = -72.0
 offset_right = 16.0
-offset_bottom = 64.0
+offset_bottom = 72.0
 
 [node name="Front" type="CollisionShape2D" parent="."]
 position = Vector2(16, -64)

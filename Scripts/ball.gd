@@ -1,9 +1,11 @@
 extends Area2D
 
-var direction = Vector2(200, 200)
+const velocity = 400
+
+var direction = Vector2(1, 1)
 
 func _process(delta):
-	position += direction * delta
+	position += direction.normalized() * velocity * delta
 	
 func horizontal():
 	direction.x *= -1

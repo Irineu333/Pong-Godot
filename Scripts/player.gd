@@ -3,7 +3,7 @@ extends Area2D
 @export var up : Key
 @export var down : Key
 
-var velocity = 500
+const velocity = 500
 
 func _process(delta):
 	if Input.is_key_pressed(up):
