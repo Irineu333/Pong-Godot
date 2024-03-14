@@ -6,7 +6,7 @@
 a = Vector2(0, -8)
 b = Vector2(0, 136)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="StaticBody2D"]
 script = ExtResource("1_k4p42")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,5 +18,3 @@ offset_bottom = 72.0
 [node name="Front" type="CollisionShape2D" parent="."]
 position = Vector2(16, -64)
 shape = SubResource("SegmentShape2D_x4bb0")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
