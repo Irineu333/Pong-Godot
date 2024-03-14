@@ -13,16 +13,12 @@ func _ready():
 	var y = [1, -1].pick_random()
 	
 	direction = Vector2(x, y)
-	
+
 func _process(delta):
-	
-	if position.y >= top_limit:
-		vertical()
 		
-	if position.y <= bottom_limit:
-		vertical()
+	if position.y <= top_limit or position.y >= bottom_limit: vertical();
 	
-	position += direction.normalized() * velocity * delta
+	position += direction.normalized() *  velocity * delta
 	
 func horizontal():
 	direction.x *= -1
@@ -30,5 +26,5 @@ func horizontal():
 func vertical():
 	direction.y *= -1
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	horizontal()

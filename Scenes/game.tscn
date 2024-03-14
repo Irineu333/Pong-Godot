@@ -24,4 +24,5 @@ down = 4194322
 
 [node name="Ball" parent="." instance=ExtResource("2_sga3q")]
 position = Vector2(576, 320)
-bottom_limit = 640
+top_limit = 16
+bottom_limit = 624
