@@ -16,15 +16,17 @@ func _ready():
 
 func _process(delta):
 		
-	if position.y <= top_limit or position.y >= bottom_limit: vertical();
+	if position.y <= top_limit or position.y >= bottom_limit: 
+		flip_vertical();
 	
 	position += direction.normalized() *  velocity * delta
 	
-func horizontal():
+func flip_horizontal():
 	direction.x *= -1
 
-func vertical():
+func flip_vertical():
 	direction.y *= -1
 
-func _on_body_entered(_body):
-	horizontal()
+func _on_body_entered(body):
+	if body.is_in_group("players"):
+		flip_horizontal()
