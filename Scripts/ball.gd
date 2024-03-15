@@ -20,13 +20,13 @@ func _process(delta):
 		flip_vertical();
 	
 	position += direction.normalized() *  velocity * delta
-	
+
+func _on_body_entered(body):
+	if body.is_in_group("players"):
+		flip_horizontal()
+		
 func flip_horizontal():
 	direction.x *= -1
 
 func flip_vertical():
 	direction.y *= -1
-
-func _on_body_entered(body):
-	if body.is_in_group("players"):
-		flip_horizontal()
