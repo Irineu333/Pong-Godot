@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+class_name Player
+
 @export_group("Keys")
 @export var up : Key
 @export var down : Key
@@ -11,3 +13,6 @@ func _process(delta):
 		position.y -= velocity * delta
 	if Input.is_key_pressed(down):
 		position.y += velocity * delta
+
+func goal():
+	print("goal")
