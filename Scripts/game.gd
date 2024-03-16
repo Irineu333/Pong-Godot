@@ -8,7 +8,7 @@ class_name Game
 func _on_timer_timeout():
 	ball.start()
 	
-func goal(ball : Ball):
-	ball.stop()
+func goal(goal_ball : Ball):
+	goal_ball.stop()
 	restart_time.start()
 

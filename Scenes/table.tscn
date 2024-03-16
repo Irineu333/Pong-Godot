@@ -1,13 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://blnvwtcf2764j"]
 
 [ext_resource type="Script" path="res://Scripts/table.gd" id="1_allsp"]
+[ext_resource type="PackedScene" uid="uid://dgqnn58yq63yw" path="res://Scenes/wall.tscn" id="2_hrb71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbry8"]
 size = Vector2(1153, 640)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_x7o5u"]
-a = Vector2(-600, -176)
-b = Vector2(552, -176)
 
 [node name="Table" type="Area2D"]
 script = ExtResource("1_allsp")
@@ -31,15 +28,12 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_jbry8")
 
-[node name="Wall" type="Area2D" parent="."]
+[node name="TopWall" parent="." instance=ExtResource("2_hrb71")]
+position = Vector2(-576, -320)
 
-[node name="Top" type="CollisionShape2D" parent="Wall"]
-position = Vector2(24, -144)
-shape = SubResource("SegmentShape2D_x7o5u")
-
-[node name="Bottom" type="CollisionShape2D" parent="Wall"]
-position = Vector2(24, 496)
-shape = SubResource("SegmentShape2D_x7o5u")
+[node name="BottomWall" parent="." instance=ExtResource("2_hrb71")]
+position = Vector2(-576, 320)
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
-[connection signal="area_entered" from="Wall" to="." method="_on_wall_area_entered"]
+[connection signal="area_entered" from="TopWall" to="." method="_on_top_wall_area_entered"]
+[connection signal="area_entered" from="BottomWall" to="." method="_on_bottom_wall_area_entered"]
