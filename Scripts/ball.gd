@@ -30,7 +30,7 @@ func start():
 	var y = [1, -1].pick_random()
 	
 	direction = Vector2(x, y)
-	velocity = 400
+	velocity = 500
 	visible = true
 		
 func flip_horizontal():

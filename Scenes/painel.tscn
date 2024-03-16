@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://conlrp663w22i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h3wmf"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_rx83k"]
+font_size = 24
+
+[node name="Score" type="CanvasLayer"]
+
+[node name="Left" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 16.0
+offset_right = 560.0
+offset_bottom = 56.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_h3wmf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Label" parent="."]
+offset_left = 592.0
+offset_top = 16.0
+offset_right = 696.0
+offset_bottom = 56.0
+text = "0"
+label_settings = SubResource("LabelSettings_rx83k")
+horizontal_alignment = 1
+vertical_alignment = 1
