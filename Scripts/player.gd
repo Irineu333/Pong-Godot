@@ -8,7 +8,7 @@ class_name Player
 
 const velocity = 500
 
-func _process(delta):
+func _process(delta: float):
 	if Input.is_key_pressed(up):
 		position.y -= velocity * delta
 	if Input.is_key_pressed(down):

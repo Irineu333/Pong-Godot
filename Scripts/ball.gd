@@ -13,30 +13,18 @@ var initial_position : Vector2
 @export var top_limit = 0
 @export var bottom_limit = 0
 
-@export_group("Goal")
-@export var right_goal = 0
-@export var left_goal = 0
-
 func _ready():
 	initial_position = position
 	start()
 
-func _process(delta):
+func _process(delta: float):
 		
 	if position.y <= top_limit or position.y >= bottom_limit: 
 		flip_vertical();
 		
-	if position.x <= right_goal:
-		stop()
-		game.goal_right()
-	
-	if  position.x >= left_goal:
-		stop()
-		game.goal_left()
-	
 	position += direction.normalized() *  velocity * delta
 
-func _on_body_entered(body):
+func _on_body_entered(body: Node):
 	if body.is_in_group("players"):
 		flip_horizontal()
 
