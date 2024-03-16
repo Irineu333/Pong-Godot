@@ -9,10 +9,6 @@ var initial_position : Vector2
 
 @onready var game : Game = $".."
 
-@export_group("Limits")
-@export var top_limit = 0
-@export var bottom_limit = 0
-
 func _ready():
 	initial_position = position
 	start()

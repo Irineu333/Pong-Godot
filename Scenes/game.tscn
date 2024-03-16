@@ -12,20 +12,18 @@ script = ExtResource("1_0nfu7")
 position = Vector2(576, 320)
 
 [node name="Player1" parent="." instance=ExtResource("1_j8ev1")]
-position = Vector2(32, 320)
+position = Vector2(22, 320)
 up = 87
 down = 83
 
 [node name="Player2" parent="." instance=ExtResource("1_j8ev1")]
-position = Vector2(1120, 320)
+position = Vector2(1128, 320)
 scale = Vector2(-1, 1)
 up = 4194320
 down = 4194322
 
 [node name="Ball" parent="." instance=ExtResource("2_sga3q")]
 position = Vector2(576, 320)
-top_limit = 16
-bottom_limit = 624
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
