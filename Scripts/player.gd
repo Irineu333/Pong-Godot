@@ -2,6 +2,8 @@ extends StaticBody2D
 
 class_name Player
 
+@onready var table : Table = $"../Table"
+
 @export_group("Keys")
 @export var up : Key
 @export var down : Key

@@ -18,10 +18,6 @@ func _ready():
 	start()
 
 func _process(delta: float):
-		
-	if position.y <= top_limit or position.y >= bottom_limit: 
-		flip_vertical();
-		
 	position += direction.normalized() *  velocity * delta
 
 func _on_body_entered(body: Node):
