@@ -12,10 +12,9 @@ config_version=5
 
 config/name="Pong"
 config/version="1.0.0"
-run/main_scene="res://Scenes/game.tscn"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0, 0.0235294, 0.223529, 1)
-boot_splash/show_image=false
 
 [display]
 

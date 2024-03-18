@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl5r40weh0cgf"]
 
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_0nfu7"]
-[ext_resource type="PackedScene" uid="uid://c4v44cidqw22u" path="res://Scenes/player.tscn" id="1_j8ev1"]
-[ext_resource type="PackedScene" uid="uid://blnvwtcf2764j" path="res://Scenes/table.tscn" id="2_mexm7"]
-[ext_resource type="PackedScene" uid="uid://dnh8ji1d26y8n" path="res://Scenes/ball.tscn" id="2_sga3q"]
-[ext_resource type="PackedScene" uid="uid://conlrp663w22i" path="res://Scenes/painel.tscn" id="5_nng1g"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_0nfu7"]
+[ext_resource type="PackedScene" uid="uid://c4v44cidqw22u" path="res://scenes/player.tscn" id="1_j8ev1"]
+[ext_resource type="PackedScene" uid="uid://blnvwtcf2764j" path="res://scenes/table.tscn" id="2_mexm7"]
+[ext_resource type="PackedScene" uid="uid://dnh8ji1d26y8n" path="res://scenes/ball.tscn" id="2_sga3q"]
+[ext_resource type="PackedScene" uid="uid://conlrp663w22i" path="res://scenes/painel.tscn" id="5_nng1g"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_0nfu7")

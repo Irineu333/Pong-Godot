@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cf510qf2h0uai"
-path="res://.godot/imported/goal-impact.wav-c057c11253c6bb486aa97a7922405d4b.sample"
+path="res://.godot/imported/goal-impact.wav-e22e725ad54799584df91f3b65ccd77f.sample"
 
 [deps]
 
-source_file="res://Songs/goal-impact.wav"
-dest_files=["res://.godot/imported/goal-impact.wav-c057c11253c6bb486aa97a7922405d4b.sample"]
+source_file="res://sounds/goal-impact.wav"
+dest_files=["res://.godot/imported/goal-impact.wav-e22e725ad54799584df91f3b65ccd77f.sample"]
 
 [params]
 
