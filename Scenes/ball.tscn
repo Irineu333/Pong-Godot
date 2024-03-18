@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnh8ji1d26y8n"]
+[gd_scene load_steps=6 format=3 uid="uid://dnh8ji1d26y8n"]
 
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_2v5no"]
+[ext_resource type="AudioStream" uid="uid://cbjl4odw1kxf" path="res://Songs/barrier-impact.wav" id="2_cfnfo"]
+[ext_resource type="AudioStream" uid="uid://cf510qf2h0uai" path="res://Songs/goal-impact.wav" id="3_oict3"]
+[ext_resource type="AudioStream" uid="uid://bckug6lwxguj7" path="res://Songs/player-impact.wav" id="4_5mrdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1lrv"]
 size = Vector2(32, 32)
@@ -17,6 +20,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_s1lrv")
+
+[node name="BarrierImpact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cfnfo")
+
+[node name="GoalImpact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oict3")
+
+[node name="PlayerImpact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5mrdx")
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
