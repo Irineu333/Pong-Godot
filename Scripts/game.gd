@@ -12,6 +12,13 @@ class_name Game
 var player1 = 0
 var player2 = 0
 
+func _process(_delta):
+	if Input.is_key_pressed(KEY_R):
+		get_tree().reload_current_scene()
+	
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
+
 func _ready():
 	start_time.start()
 
