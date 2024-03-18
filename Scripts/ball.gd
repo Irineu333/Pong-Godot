@@ -44,7 +44,6 @@ func start():
 	visible = true
 		
 func flip_horizontal():
-	barrier_impact.play()
 	direction.x *= -1
 
 func flip_vertical():
