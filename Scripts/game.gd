@@ -30,5 +30,5 @@ func goal(goal_ball : Ball):
 	goal_ball.stop()
 	reset_time.start()
 	
-	right_score.text = str(player2)
-	left_score.text = str(player1)
+	right_score.text = str(player1)
+	left_score.text = str(player2)
