@@ -13,6 +13,3 @@ func _process(delta: float):
 		position.y -= velocity * delta
 	if Input.is_key_pressed(down) and position.y < 568:
 		position.y += velocity * delta
-
-func goal():
-	print("goal")

@@ -2,7 +2,8 @@ extends Node2D
 
 class_name Game
 
-@onready var restart_time: Timer = $Timer
+@onready var reset_time: Timer = $Reset
+@onready var start_time: Timer = $Start
 @onready var ball: Ball = $Ball
 
 @onready var right_score : Label = $"../Game/Score/Right"
@@ -11,7 +12,14 @@ class_name Game
 var player1 = 0
 var player2 = 0
 
-func _on_timer_timeout():
+func _ready():
+	start_time.start()
+
+func _on_reset_timeout():
+	ball.reset()
+	start_time.start()
+	
+func _on_start_timeout():
 	ball.start()
 	
 func goal(goal_ball : Ball):
@@ -20,7 +28,7 @@ func goal(goal_ball : Ball):
 	if goal_ball.direction.x < 0: player1 += 1
 	
 	goal_ball.stop()
-	restart_time.start()
+	reset_time.start()
 	
 	right_score.text = str(player2)
 	left_score.text = str(player1)

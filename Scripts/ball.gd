@@ -17,7 +17,6 @@ var initial_position : Vector2
 
 func _ready():
 	initial_position = position
-	start()
 
 func _process(delta: float):
 	position += direction.normalized() *  velocity * delta
@@ -31,7 +30,10 @@ func stop():
 	goal_impact.play()
 	visible = false
 	velocity = 0
+	
+func reset():
 	position = initial_position
+	visible = true
 	
 func start():
 	var x = [1, -1].pick_random()
